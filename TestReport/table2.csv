@@ -1,0 +1,142 @@
+FR1.1 Login,
+FR1.2 Logout,
+FR1.3 Create a new user account,"userController > createUser > *
+userDAO > createUser > *
+userRoutes > POST /users > *
+userRoutes + userController + userDAO + db > POST /users > *"
+FR2.1 Show the list of all users,"userController > getUsers > *
+userDAO > getUsers > *
+userRoutes >  GET /users > *
+userRoutes + userController + userDAO + db > GET /ezelectronics/users > *"
+FR2.2 Show the list of all users with a specific role,"userController > getUsersByRole > *
+userDAO > getUsersByRole > *
+userRoutes > GET /users/roles/:role > *
+userRoutes + userController + userDAO + db > GET /ezelectronics/users/roles/:role > *"
+FR2.3 Show the information of a single user,"userController > getUserByUsername > *
+userDAO > getUserByUsername > *
+userRoutes > GET /users/:username > *
+userRoutes + userController + userDAO + db > GET /ezelectronics/users/:username > *"
+FR2.4 Update the information of a single user,"userController > updateUserInfo > *
+userDAO > updateInfo > *
+userRoutes > PATCH /users/:username > *
+userRoutes + userController + userDAO + db > PATCH /ezelectronics/users/:username > *"
+FR2.5 Delete a single non Admin user,"userController > deleteUser > *
+userDAO > deleteUser > *
+userRoutes > DELETE /users/:username > *
+userRoutes + userController + userDAO + db > DELETE /ezelectronics/users/:username > *"
+FR2.6 Delete all non Admin users,"userController > deleteAll > *
+userDAO > deleteNonAdmin > *
+userRoutes > DELETE /users > *
+userRoutes + userController + userDAO + db > DELETE /ezelectronics/users > *"
+FR3.1 Register a set of new products,"ProductDAO > registerProduct > *
+ProductController > registerProducts > *
+ProductRoutes > POST / > *
+ProductDAO + db > registerProduct > *
+ProductController + ProductDAO + db > registerProducts > *
+ProductRoutes + ProductController + ProductDAO + db > ""POST /"" > *"
+FR3.2 Update the quantity of a product,"ProductDAO > changeProductQuantity > *
+ProductController > changeProductQuantity > *
+ProductRoutes > PATCH /:model > *
+ProductDAO + db > changeProductQuantity > *
+ProductController + ProductDAO + db > changeProductQuantity > *
+ProductRoutes + ProductController + ProductDAO + db > ""PATCH /:model"" > *"
+FR3.3 Sell a product,"ProductDAO > sellProduct > *
+ProductController > sellProduct > *
+ProductRoutes > PATCH /:model/sell > *
+ProductDAO + db > sellProduct > *
+ProductController + ProductDAO + db > sellProduct > *
+ProductRoutes + ProductController + ProductDAO + db > ""PATCH /:model/sell"" > *"
+FR3.4 Show the list of all products,"ProductDAO > getProducts > Successfully get all available products
+ProductController > getProducts > No filtering > *
+ProductRoutes > GET / > *
+ProductDAO + db >  getProducts > *
+ProductController + ProductDAO + db > getProducts > No filtering > *
+ProductRoutes + ProductController + ProductDAO + db > ""GET /"" > Authentication > *
+ProductRoutes + ProductController + ProductDAO + db > ""GET /"" > No specific grouping > *
+ProductRoutes + ProductController + ProductDAO + db > ""GET /"" > Additional constraints > *"
+FR3.4.1 Show the list of all available products,"ProductDAO > getAvailableProducts > Successfully get all available products
+ProductController > getAvailableProducts > No filtering > *
+ProductRoutes > GET /available > *
+ProductDAO + db > getAvailableProducts > *
+ProductController + ProductDAO + db > getAvailableProducts > No filtering > *
+ProductRoutes + ProductController + ProductDAO + db > ""GET /available"" > Authentication > *
+ProductRoutes + ProductController + ProductDAO + db > ""GET /available"" > No specific grouping > *
+ProductRoutes + ProductController + ProductDAO + db > ""GET /available"" > Additional constraints > *"
+FR3.5 Show the list of all products with the same category,"ProductDAO > getProducts > Successfully filter by category
+ProductController > getProducts > Filter by category > *
+ProductController + ProductDAO + db > getProducts > Filter by category > *
+ProductRoutes + ProductController + ProductDAO + db > ""GET /"" > Grouping by category > *"
+FR3.5.1 Show the list of all available products with the same category,"ProductDAO > getAvailableProducts > Successfully filter by category
+ProductController > getAvailableProducts > Filter by category > *
+ProductController + ProductDAO + db > getAvailableProducts > Filter by category > *
+ProductRoutes + ProductController + ProductDAO + db > ""GET /available"" > Grouping by category > *"
+FR3.5 Show the list of all products with the same model,"ProductDAO > getProducts > Successfully filter by model
+ProductController > getProducts > Filter by model > *
+ProductController + ProductDAO + db > getProducts > Filter by model > *
+ProductRoutes + ProductController + ProductDAO + db > ""GET /"" > Grouping by model > *"
+FR3.5.1 Show the list of all available products with the same model,"ProductDAO > getAvailableProducts > Successfully filter by model
+ProductController > getAvailableProducts > Filter by model > *
+ProductController + ProductDAO + db > getAvailableProducts > Filter by model > *
+ProductRoutes + ProductController + ProductDAO + db > ""GET /available"" > Grouping by model > *"
+FR3.7 Delete a product,"ProductDAO > deleteProduct > *
+ProductController > deleteProduct > *
+ProductRoutes > DELETE /:model > *
+ProductDAO + db > deleteProduct > *
+ProductController + ProductDAO + db > deleteProduct > *
+ProductRoutes + ProductController + ProductDAO + db > ""DELETE /:model"" > *"
+FR3.8 Delete all products,"ProductDAO > deleteAllProducts > *
+ProductController > deleteAllProducts > *
+ProductRoutes > DELETE / > *
+ProductDAO + db > deleteAllProducts > *
+ProductController + ProductDAO + db > deleteAllProducts > *
+ProductRoutes + ProductController + ProductDAO + db > ""DELETE /"" > *"
+FR4.1 Add a new review to a product,"ReviewController > Correctly add a new Review
+ReviewController > Invalid review score
+ReviewRouter >POST/:model> add a new review
+ReviewDAO>Correctly add a new Review
+ReviewDAO>userHasReview
+ReviewRoutes + ReviewController + ReviewDAO + db > ""POST /:model"" > *"
+FR4.2 Get the list of all reviews assigned to a product,"ReviewController > returns all reviews for a product
+ReviewRouter >GET/:model> retrieving all reviews of a product
+ReviewDAO>get allreviews
+ReviewRoutes + ReviewController + ReviewDAO + db > ""GET /:model"" > *"
+FR4.3 Delete a review given to a product,"ReviewController > deletes the review
+ReviewRouter >DELETE/:model >deleting the review made by a user for one product
+ReviewDAO>Correctly deleteUser Review
+ReviewRoutes + ReviewController + ReviewDAO + db > ""DELETE /:model"" > *"
+FR4.4 Delete all reviews of a product,"ReviewController > deletes the review of product
+ReviewRouter > DELETE/:model/all>deleting all reviews of a product
+ReviewDAO>Correctly  deleteModelReviews
+ReviewRoutes + ReviewController + ReviewDAO + db > ""DELETE /:model/all"" > *"
+FR4.5 Delete all reviews of all products,"ReviewController > deletes the review of all products                                                                               
+ReviewRouter > DELETE/>deleting all reviews of all products
+ReviewDAO>Correctly deleteAllReviews
+ReviewRoutes + ReviewController + ReviewDAO + db > ""DELETE /"" > *"
+FR5.1 Show the information of the current cart,"routes_tests > GET /carts/
+controller_tests > getCart 
+dao tests > getCart"
+FR5.2 Add a product to the current cart,"routes_tests > POST /carts
+controller_tests > addToCart 
+dao tests > getProductInCart 
+dao tests > insertProductInCart
+dao tests > increaseProductQuantityInCart"
+FR5.3 Checkout the current cart,"routes_tests > PATCH /carts/
+controller_tests > checkoutCart 
+dao tests > checkoutCart"
+FR5.4 Show the history of the paid carts,"routes_tests > GET /carts/history 
+controller_tests > getCustomerCarts
+dao tests > getUserAllPaidCarts"
+FR5.5 Remove a product from the current cart,"routes_tests > DELETE /carts/products/:model  
+controller_tests > removeProductFromCart
+dao tests > getProductInCart
+dao tests > removeProductFromCart
+dao tests > decreaseProductQuantityInCart"
+FR5.6 Delete the current cart,"routes_tests > DELETE /carts/current
+controller_tests > clearCart
+dao tests > removeProductFromCart"
+FR5.7 See the list of all carts of all users,"routes_tests > GET /carts/all
+controller_tests > getAllCarts
+dao tests > getAllCarts"
+FR5.8 Delete all carts,"routes_tests > DELETE /carts/
+controller_tests > deleteAllCarts
+dao tests > deleteAllCarts"

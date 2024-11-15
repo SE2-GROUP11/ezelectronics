@@ -1,0 +1,42 @@
+CREATE TRIGGER updateCartPriceOnProductInsertion
+AFTER
+INSERT ON productincart
+FOR EACH ROW
+
+BEGIN
+
+	UPDATE cart
+	SET total = total + new.price * new.quantity
+	WHERE id = new.cartId;
+
+END;
+
+---------------------------------------------------------
+
+CREATE TRIGGER updateCartPriceOnProductDeletion
+AFTER
+DELETE ON productincart
+FOR EACH ROW
+
+BEGIN
+
+	UPDATE cart
+	SET total = total - old.price * new.quantity
+	WHERE id = old.cartId;
+
+END;
+
+---------------------------------------------------------
+
+CREATE TRIGGER updateCartPriceOnProductUpdate
+AFTER
+UPDATE OF quantity ON productincart
+FOR EACH ROW
+
+BEGIN
+
+	UPDATE cart
+	SET total = total + new.price * (new.quantity - old.quantity)
+	WHERE id = new.cartId;
+
+END;

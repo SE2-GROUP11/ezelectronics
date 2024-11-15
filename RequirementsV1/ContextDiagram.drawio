@@ -1,0 +1,61 @@
+<mxfile host="app.diagrams.net" modified="2024-04-29T20:22:07.548Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="QkrV366OT1GW9oiN9wfA" version="24.3.1" type="device">
+  <diagram id="xmBBovGr6-4fbqpckJKo" name="Page-1">
+    <mxGraphModel dx="1802" dy="882" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="YgLCpqBoeRSBLpxQAKj4-1" value="Manager" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+          <mxGeometry x="220" y="210" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YgLCpqBoeRSBLpxQAKj4-2" value="Customer" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+          <mxGeometry x="600" y="210" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YgLCpqBoeRSBLpxQAKj4-3" value="EZElectronics" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="370" y="340" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="YgLCpqBoeRSBLpxQAKj4-7" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" parent="1" source="YgLCpqBoeRSBLpxQAKj4-1" target="YgLCpqBoeRSBLpxQAKj4-3" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="300" as="sourcePoint" />
+            <mxPoint x="440" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YgLCpqBoeRSBLpxQAKj4-8" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0;exitDx=0;exitDy=0;" parent="1" source="YgLCpqBoeRSBLpxQAKj4-3" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="300" as="sourcePoint" />
+            <mxPoint x="590" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gz7x71-tzImeIPMa4Hl6-1" value="Manager" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="220" y="210" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gz7x71-tzImeIPMa4Hl6-2" value="Customer" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="600" y="210" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gz7x71-tzImeIPMa4Hl6-3" value="EZElectronics" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="340" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="gz7x71-tzImeIPMa4Hl6-4" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="gz7x71-tzImeIPMa4Hl6-1" target="gz7x71-tzImeIPMa4Hl6-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="300" as="sourcePoint" />
+            <mxPoint x="440" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gz7x71-tzImeIPMa4Hl6-5" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="gz7x71-tzImeIPMa4Hl6-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="300" as="sourcePoint" />
+            <mxPoint x="590" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gz7x71-tzImeIPMa4Hl6-6" value="Store owner" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="600" y="440" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gz7x71-tzImeIPMa4Hl6-7" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="gz7x71-tzImeIPMa4Hl6-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="482" y="362" as="sourcePoint" />
+            <mxPoint x="590" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

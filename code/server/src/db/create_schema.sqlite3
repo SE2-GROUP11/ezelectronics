@@ -1,0 +1,43 @@
+create table products
+(
+    sellingPrice integer not null,
+    model        text primary key,
+    category     text    not null CHECK ( category IN ('Smartphone', 'Laptop', 'Appliance')),
+    arrivalDate  text,
+    details      text,
+    quantity     integer not null
+);
+
+create table cart
+(
+    id          integer primary key AUTOINCREMENT,
+    customer    text    not null,
+    paid        numeric not null,
+    paymentDate text,
+    total       integer not null ,
+    FOREIGN KEY (customer) REFERENCES users (username)
+);
+
+
+create table productincart
+(
+    cartId   integer not null,
+    model    text    not null,
+    quantity integer not null,
+    category text    not null CHECK ( category IN ('Smartphone', 'Laptop', 'Appliance')),
+    price    integer not null,
+    FOREIGN KEY (model) REFERENCES products (model),
+    FOREIGN KEY (cartId) REFERENCES cart (id),
+    primary key (cartId, model)
+);
+
+create table productreview
+(
+    model   text    not null,
+    user    text    not null,
+    score   integer not null,
+    date    text    not null,
+    comment text    not null,
+    FOREIGN KEY (model) REFERENCES products (model),
+    FOREIGN KEY (user) REFERENCES users (username)
+);
